@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="css/dreammaker.css">
+		<title>创想家</title>
+		<script type="text/javascript">
+			 var x=1;
+			function stop(){				
+				if(x%2==1)
+					{document.getElementById('au').pause();
+					document.getElementById('music1').src='image/music_off.png';
+					document.getElementById('music1').style.animation='paused';
+					x=x+1;}
+				else{document.getElementById('au').play();
+					document.getElementById('music1').src='image/music_on.png';
+					document.getElementById('music1').style.animation='';
+					x=x+1;}					 
+			}
+		</script>
+	</head>
+	<body>
+		<div class="pic">
+			<div class="nav">
+				<header class="head">
+					<div class="dian"></div>
+					<div class="dian d1"></div>
+					<div class="dian d2"></div>
+				</header>
+				<div class="fgx"></div>
+			</div>
+			<div class="center">
+				<div class="pt">
+					<img class="sj1" src="image/1.png">
+					<img class="sj2" src="image/2.png">
+					<img class="sj3" src="image/3.png">
+					<img class="sj4" src="image/4.png">
+					<div class="maker">
+						<img class="z m" src="image/M.png">
+						<img class="z a" src="image/A.png">
+						<img class="z k" src="image/K.png">
+						<img class="z e" src="image/E.png">
+						<img class="z r" src="image/R.png">
+					</div>
+					<img class="ram" src="image/whiteR&AM.png">
+					<img class="gray7" src="image/7.png">
+					<img class="blued" src="image/blueD.png">
+					<img class="whited" src="image/whiteD.png">
+					<img class="redd" src="image/redD.png">
+					<img class="lightgreen" src="image/6.png">
+					<img class="bige" src="image/bigE.png">
+					<img class="lightgray" src="image/5.png">
+				</div>
+			</div>
+			<div class="dream">2&nbsp0&nbsp1&nbsp5&nbsp创&nbsp想&nbsp家&nbsp盛&nbsp典</div>
+			<div class="man">男人<span>有梦<span>就去<span>造</span></span></span></div>
+			<div class="foot">
+				<img class="jiantou" src="image/jiantou.png">
+				<a href="#red" onclick="stop()">
+					<div id="qq" class="music">
+						<img id="music1" class="music1" src="image/music_on.png">
+					</div>
+				</a>
+				<audio src="music/Shiftone_1.18.mp3" id="au" autoplay="autoplay"></audio>	
+			</div>
+		</div>
+	</body>
+</html>
