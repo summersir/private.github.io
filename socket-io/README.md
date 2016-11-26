@@ -1,6 +1,3 @@
-title: 基于Node.js和socket打造简易聊天室
-date: 2015-10-05
----
 ## 源码&演示
 
 源码可访问项目的[GITHub](https://github.com/summersir/private.github.io/tree/master/socket-io)页面下载
