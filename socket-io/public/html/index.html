@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>聊天室初版</title>
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <div class="chat">
+    <h2>欢迎进入聊天室 当前人数<span>0</span></h2>
+    <ul>
+
+    </ul>
+  </div>
+  <form action="">
+    <input type="text" class="message">
+    <input type="button" value="发送" class="btn">
+  </form>
+</body>
+
+<script src="../../socket.io/socket.io.js"></script>
+<!--"../../socket.io/socket.io.js"-->
+<script>
+  var socket = io('http://127.0.0.1:3000');
+
+  var btn = document.querySelector(".btn");
+  var info = document.querySelector(".message");
+  var list = document.querySelector('ul');
+  var span = document.querySelector('span');
+
+
+  btn.onclick = function(ev){
+    ev.preventDefault();
+    var message = info.value;
+    socket.emit('news', { info: message });
+  };
+
+  socket.on('message', function (data) {
+    list.innerHTML="";
+    var msg = data.msg;
+    console.log(msg);
+    for (var i = 0;i<msg.length;i++){
+      var li = document.createElement("li");
+      li.innerHTML = msg[i];
+      list.appendChild(li);
+    }
+  });
+</script>
+</html>
