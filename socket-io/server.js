@@ -1,10 +1,9 @@
-/**
- * Created by shenjunchen on 16/11/11.
- */
+// 引入http模块
 var http = require('http');
 var fs = require('fs');
 var mime = require('mime');
 
+// 创建一个服务器，设置端口号为3000
 var server = http.createServer(handle).listen(3000,function(){
   console.log("success")
 });
