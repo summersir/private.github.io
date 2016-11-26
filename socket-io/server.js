@@ -1,6 +1,8 @@
 // 引入http模块
 var http = require('http');
+// 引入fs模块
 var fs = require('fs');
+// 引入mime模块
 var mime = require('mime');
 
 // 创建一个服务器，设置端口号为3000
@@ -60,7 +62,6 @@ io.on('connection', function (socket) {
   // on(事件名，接受回调)
   // 服务端要和客户端11对应
   socket.on('news', function (data) {
-
     arr.push(data.info);
     console.log(arr);
     io.sockets.emit('message',{msg:arr});
